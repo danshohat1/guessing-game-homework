@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src = "https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    <title>Guessing Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+        body {
+            background-image: url("./background.jfif");
+            /* Full height */
+            height: 100%;
+            width: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            overflow: hidden;
+
+            font-family: 'M PLUS 1p', sans-serif;
+
+            text-align: center;
+       
+        }
+
+        html {
+            height: 100%;
+            width: 100%;
+        
+        }
+        .on-screen{
+            visibility: visible;
+            margin-top: 250px;
+        }
+        #createPlayers{
+           
+            margin-left: 780px;
+            text-align: justify;
+        }
+        .hidden{
+            visibility: hidden;
+        }
+        input{
+            width: 20rem;
+        }
+        .add-player-btns{
+            margin-top: 30px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "heading" class = "on-screen">
+        <h1 style = "font-size: 4rem;"> Guessing Game</h1>
+
+        <button class = "btn btn-primary" style = "margin-top: 30px;" id = "create-game-btn">
+            Create Game!
+        </button>
+    </div>
+
+    <div id = "createPlayers" class = "hidden"> 
+        <h1> Add Player! </h1>
+        <small id = "current-players"> Current Players: there are no players.</small><br>
+        <label for = "name" style = "font-size: 2rem;"> Enter your name </label>
+        <input name = "name" class = "form-control" style = "width: 20rem;" id = "name" > 
+    
+        <label for = "guess" style = "font-size: 2rem;">   Enter your guess </label>
+        <input name = "guess" class = "form-control" style = "width: 20rem;  " id = "guess"> 
+
+        <button class = "btn btn-primary add-player-btns" id = "add-player-btn" > Add Player </button> <br>
+    </div>
+
+    <div id = "results" class = "hidden"> 
+        <h1 id = "numberResult"></h1>
+
+        <h3 id = "winner"></h1>
+
+    </div>
+
+    <script src = "./guessingGame.js"></script>
+
+</body>
+
+</html>
